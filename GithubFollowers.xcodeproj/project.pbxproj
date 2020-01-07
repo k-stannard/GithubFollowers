@@ -51,6 +51,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		452B861B23C412370034942E /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				459BEBCB23BFCC2E00C73571 /* SearchController.swift */,
+				452B860E23C2DBAF0034942E /* FollowerListController.swift */,
+				459BEBCD23BFCC5400C73571 /* FavoritesController.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		452B861C23C412740034942E /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				452B861623C406800034942E /* GFAlertController.swift */,
+				459BEBD023C05AB500C73571 /* GFButton.swift */,
+				459BEBD223C05C1B00C73571 /* GFTextField.swift */,
+				452B861223C3F6990034942E /* GFTitleLabel.swift */,
+				452B861423C405600034942E /* GFBodyLabel.swift */,
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		452B861D23C412A00034942E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				452B861823C40F880034942E /* UIViewController+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		452B861E23C413020034942E /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				459BEBC523BFC22800C73571 /* Info.plist */,
+				459BEBB723BFC22500C73571 /* AppDelegate.swift */,
+				459BEBB923BFC22500C73571 /* SceneDelegate.swift */,
+				459BEBC023BFC22800C73571 /* Assets.xcassets */,
+				459BEBC223BFC22800C73571 /* LaunchScreen.storyboard */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
 		459BEBAB23BFC22500C73571 = {
 			isa = PBXGroup;
 			children = (
@@ -70,20 +112,10 @@
 		459BEBB623BFC22500C73571 /* GithubFollowers */ = {
 			isa = PBXGroup;
 			children = (
-				459BEBCD23BFCC5400C73571 /* FavoritesController.swift */,
-				459BEBCB23BFCC2E00C73571 /* SearchController.swift */,
-				459BEBB723BFC22500C73571 /* AppDelegate.swift */,
-				459BEBB923BFC22500C73571 /* SceneDelegate.swift */,
-				459BEBD023C05AB500C73571 /* GFButton.swift */,
-				459BEBD223C05C1B00C73571 /* GFTextField.swift */,
-				459BEBC023BFC22800C73571 /* Assets.xcassets */,
-				459BEBC223BFC22800C73571 /* LaunchScreen.storyboard */,
-				459BEBC523BFC22800C73571 /* Info.plist */,
-				452B860E23C2DBAF0034942E /* FollowerListController.swift */,
-				452B861223C3F6990034942E /* GFTitleLabel.swift */,
-				452B861423C405600034942E /* GFBodyLabel.swift */,
-				452B861623C406800034942E /* GFAlertController.swift */,
-				452B861823C40F880034942E /* UIViewController+Ext.swift */,
+				452B861B23C412370034942E /* Screens */,
+				452B861C23C412740034942E /* Custom Views */,
+				452B861D23C412A00034942E /* Extensions */,
+				452B861E23C413020034942E /* Support */,
 			);
 			path = GithubFollowers;
 			sourceTree = "<group>";
@@ -306,7 +338,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R5JCWQ932H;
-				INFOPLIST_FILE = GithubFollowers/Info.plist;
+				INFOPLIST_FILE = GithubFollowers/Support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -324,7 +356,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R5JCWQ932H;
-				INFOPLIST_FILE = GithubFollowers/Info.plist;
+				INFOPLIST_FILE = GithubFollowers/Support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
