@@ -17,6 +17,8 @@
 		457E030F23C6931F00523057 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457E030E23C6931F00523057 /* User.swift */; };
 		457E031223C6BE7A00523057 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457E031123C6BE7A00523057 /* NetworkManager.swift */; };
 		457E031523C6D3D400523057 /* GFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457E031423C6D3D400523057 /* GFError.swift */; };
+		457E033823C7EADF00523057 /* FollowerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457E033723C7EADF00523057 /* FollowerCell.swift */; };
+		457E033A23C7EAFC00523057 /* GFAvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457E033923C7EAFC00523057 /* GFAvatarImageView.swift */; };
 		459BEBB823BFC22500C73571 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459BEBB723BFC22500C73571 /* AppDelegate.swift */; };
 		459BEBBA23BFC22500C73571 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459BEBB923BFC22500C73571 /* SceneDelegate.swift */; };
 		459BEBC123BFC22800C73571 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 459BEBC023BFC22800C73571 /* Assets.xcassets */; };
@@ -38,6 +40,8 @@
 		457E030E23C6931F00523057 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		457E031123C6BE7A00523057 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		457E031423C6D3D400523057 /* GFError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFError.swift; sourceTree = "<group>"; };
+		457E033723C7EADF00523057 /* FollowerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerCell.swift; sourceTree = "<group>"; };
+		457E033923C7EAFC00523057 /* GFAvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAvatarImageView.swift; sourceTree = "<group>"; };
 		459BEBB423BFC22500C73571 /* GithubFollowers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubFollowers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		459BEBB723BFC22500C73571 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		459BEBB923BFC22500C73571 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,12 +78,14 @@
 		452B861C23C412740034942E /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				457E033623C7EAA700523057 /* Cells */,
 				452B861623C406800034942E /* GFAlertController.swift */,
 				459BEBD023C05AB500C73571 /* GFButton.swift */,
 				459BEBD223C05C1B00C73571 /* GFTextField.swift */,
 				452B861223C3F6990034942E /* GFTitleLabel.swift */,
 				452B861423C405600034942E /* GFBodyLabel.swift */,
 				457E030923C58B6E00523057 /* GFContainerView.swift */,
+				457E033923C7EAFC00523057 /* GFAvatarImageView.swift */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -127,6 +133,14 @@
 				457E031423C6D3D400523057 /* GFError.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		457E033623C7EAA700523057 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				457E033723C7EADF00523057 /* FollowerCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		459BEBAB23BFC22500C73571 = {
@@ -236,6 +250,8 @@
 				452B861723C406800034942E /* GFAlertController.swift in Sources */,
 				459BEBD123C05AB500C73571 /* GFButton.swift in Sources */,
 				457E030F23C6931F00523057 /* User.swift in Sources */,
+				457E033823C7EADF00523057 /* FollowerCell.swift in Sources */,
+				457E033A23C7EAFC00523057 /* GFAvatarImageView.swift in Sources */,
 				452B861523C405600034942E /* GFBodyLabel.swift in Sources */,
 				457E030D23C692F800523057 /* Follower.swift in Sources */,
 				452B861323C3F6990034942E /* GFTitleLabel.swift in Sources */,
