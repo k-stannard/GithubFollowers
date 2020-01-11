@@ -18,6 +18,10 @@ class FollowerCell: UICollectionViewCell {
         configureFollowerCell()
     }
     
+    func set(follower: Follower) {
+        usernameLabel.text = follower.login
+    }
+    
     fileprivate func configureFollowerCell() {
         addSubview(avatarImageView)
         addSubview(usernameLabel)
