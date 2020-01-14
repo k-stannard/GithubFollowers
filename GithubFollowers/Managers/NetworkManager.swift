@@ -6,12 +6,13 @@
 //  Copyright © 2020 Koty Stannard. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class NetworkManager {
     static let shared = NetworkManager()
-    let baseURL = "https://api.github.com/users/"
-    let perPageFollowers = 100
+    private let baseURL = "https://api.github.com/users/"
+    private let perPageFollowers = 100
+    let cache = NSCache<NSString, UIImage>()
     
     private init() {}
     
