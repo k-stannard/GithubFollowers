@@ -76,8 +76,8 @@
 			children = (
 				459BEBCB23BFCC2E00C73571 /* SearchController.swift */,
 				452B860E23C2DBAF0034942E /* FollowerListController.swift */,
-				459BEBCD23BFCC5400C73571 /* FavoritesController.swift */,
 				4554899423ECF8A30091ED61 /* UserInfoController.swift */,
+				459BEBCD23BFCC5400C73571 /* FavoritesController.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";

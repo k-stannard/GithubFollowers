@@ -17,6 +17,17 @@ class UserInfoController: UIViewController {
         view.backgroundColor = .systemBackground
         let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(dismissController))
         navigationItem.rightBarButtonItem = doneButton
+        
+        NetworkManager.shared.getUserInfo(from: username) { [weak self] result in
+            guard let self = self else { return }
+            
+            switch result {
+            case .success(let user):
+                print(user)
+            case .failure(let error):
+                self.presentGFAlertOnMainThread(title: "Error", message: "Error retrieving user info", buttonTitle: "OK")
+            }
+        }
     }
     
     @objc func dismissController() {
