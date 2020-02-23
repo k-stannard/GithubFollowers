@@ -15,10 +15,9 @@ class GFBodyLabel: UILabel {
         configureBodyLabel()
     }
     
-    init(textAlignment: NSTextAlignment) {
-        super.init(frame: .zero)
+    convenience init(textAlignment: NSTextAlignment) {
+        self.init(frame: .zero)
         self.textAlignment = textAlignment
-        configureBodyLabel()
     }
     
     fileprivate func configureBodyLabel() {
