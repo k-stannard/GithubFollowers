@@ -19,34 +19,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
+        window?.rootViewController = GFTabBarController()
         window?.makeKeyAndVisible()
-        window?.rootViewController = createTabBar()
         
         configureNavigationBar()
-    }
-    
-    fileprivate func createSearchNavController() -> UINavigationController {
-        let searchVC = SearchController()
-        searchVC.title = "Search"
-        searchVC.tabBarItem = .init(tabBarSystemItem: .search, tag: 0)
-        
-        return UINavigationController(rootViewController: searchVC)
-    }
-    
-    fileprivate func createFavoritesNavController() -> UINavigationController {
-        let favoritesVC = FavoritesController()
-        favoritesVC.title = "Favorites"
-        favoritesVC.tabBarItem = .init(tabBarSystemItem: .favorites, tag: 1)
-        
-        return UINavigationController(rootViewController: favoritesVC)
-    }
-    
-    fileprivate func createTabBar() -> UITabBarController {
-        let tabBar = UITabBarController()
-        UITabBar.appearance().tintColor = .systemGreen
-        tabBar.viewControllers = [createSearchNavController(), createFavoritesNavController()]
-        
-        return tabBar
     }
     
     fileprivate func configureNavigationBar() {
