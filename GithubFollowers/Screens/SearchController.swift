@@ -13,6 +13,7 @@ class SearchController: UIViewController {
     let logoImageView = UIImageView()
     let callToActionButton = GFButton(backgroundColor: .systemGreen, title: "Get Followers")
     let usernameTextField = GFTextField()
+    var logoImageViewTopConstraint: NSLayoutConstraint!
     var isUsernameEntered: Bool { return !usernameTextField.text!.isEmpty }
 
     override func viewDidLoad() {
@@ -49,10 +50,14 @@ class SearchController: UIViewController {
     fileprivate func configureLogoImageView() {
         view.addSubview(logoImageView)
         logoImageView.translatesAutoresizingMaskIntoConstraints = false
-        logoImageView.image = UIImage(named: "gh-logo")
+        logoImageView.image = Images.ghLogo
+        
+        let topConstraintConstant: CGFloat = DeviceTypes.isiPhoneSE || DeviceTypes.isiPhone8Zoomed ? 20 : 80
+        
+        logoImageViewTopConstraint = logoImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: topConstraintConstant)
+        logoImageViewTopConstraint.isActive = true
         
         NSLayoutConstraint.activate([
-            logoImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 80),
             logoImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             logoImageView.widthAnchor.constraint(equalToConstant: 200),
             logoImageView.heightAnchor.constraint(equalToConstant: 200)
