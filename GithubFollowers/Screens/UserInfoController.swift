@@ -50,15 +50,9 @@ class UserInfoController: GFDataLoadingController {
     }
     
     func configureUIElements(with user: User) {
-        let repoItemController = GFRepoItemViewController(user: user)
-        repoItemController.delegate = self
-        
-        let followerItemController = GFFollowerItemViewController(user: user)
-        followerItemController.delegate = self
-        
         self.add(childViewController: GFUserInfoHeaderController(user: user), to: self.headerView)
-        self.add(childViewController: repoItemController, to: self.itemViewOne)
-        self.add(childViewController: followerItemController, to: self.itemViewTwo)
+        self.add(childViewController: GFRepoItemViewController(user: user, delegate: self), to: self.itemViewOne)
+        self.add(childViewController: GFFollowerItemViewController(user: user, delegate: self), to: self.itemViewTwo)
         self.dateLabel.text = "GitHub since \(user.createdAt.convertToMonthYearFormat())"
     }
     
@@ -106,7 +100,7 @@ class UserInfoController: GFDataLoadingController {
     }
 }
 
-extension UserInfoController: ItemInfoControllerDelegate {
+extension UserInfoController: GFRepoItemControllerDelegate {
     
     func didTapGitHubProfile(for user: User) {
         guard let url = URL(string: user.htmlUrl) else {
@@ -116,6 +110,9 @@ extension UserInfoController: ItemInfoControllerDelegate {
         
         presentSafariController(with: url)
     }
+}
+
+extension UserInfoController: GFFollowerItemControllerDelegate {
     
     func didTapGetFollowers(for user: User) {
         guard user.followers != 0 else {

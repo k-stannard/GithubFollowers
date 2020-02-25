@@ -8,11 +8,22 @@
 
 import UIKit
 
+protocol GFFollowerItemControllerDelegate: class {
+    func didTapGetFollowers(for user: User)
+}
+
 class GFFollowerItemViewController: GFItemInfoViewController {
+    
+    weak var delegate: GFFollowerItemControllerDelegate!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureItems()
+    }
+    
+    init(user: User, delegate: GFFollowerItemControllerDelegate) {
+        super.init(user: user)
+        self.delegate = delegate
     }
     
     fileprivate func configureItems() {
@@ -23,5 +34,9 @@ class GFFollowerItemViewController: GFItemInfoViewController {
     
     override func actionButtonTapped() {
         delegate.didTapGetFollowers(for: user)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 }
