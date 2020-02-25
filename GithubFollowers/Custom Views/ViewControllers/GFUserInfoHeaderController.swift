@@ -51,11 +51,7 @@ class GFUserInfoHeaderController: UIViewController {
     }
     
     fileprivate func addSubviews() {
-        let viewArray = [avatarImageView, usernameLabel, nameLabel, locationImageView, locationLabel, bioLabel]
-        
-        viewArray.forEach { view in
-            self.view.addSubview(view)
-        }
+        view.addSubviews(avatarImageView, usernameLabel, nameLabel, locationImageView, locationLabel, bioLabel)
     }
     
     fileprivate func layoutUI() {
@@ -92,7 +88,7 @@ class GFUserInfoHeaderController: UIViewController {
             bioLabel.topAnchor.constraint(equalTo: avatarImageView.bottomAnchor, constant: textImagePadding),
             bioLabel.leadingAnchor.constraint(equalTo: avatarImageView.leadingAnchor),
             bioLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            bioLabel.heightAnchor.constraint(equalToConstant: 60)
+            bioLabel.heightAnchor.constraint(equalToConstant: 90)
         ])
     }
     

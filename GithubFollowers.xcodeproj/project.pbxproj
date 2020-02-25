@@ -24,6 +24,7 @@
 		452B861523C405600034942E /* GFBodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452B861423C405600034942E /* GFBodyLabel.swift */; };
 		452B861723C406800034942E /* GFAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452B861623C406800034942E /* GFAlertController.swift */; };
 		452B861923C40F880034942E /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452B861823C40F880034942E /* UIViewController+Ext.swift */; };
+		4553D5052404AAB700C39A2A /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4553D5042404AAB700C39A2A /* UIView+Ext.swift */; };
 		4554899323E91CDF0091ED61 /* GFEmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4554899223E91CDF0091ED61 /* GFEmptyStateView.swift */; };
 		4554899523ECF8A30091ED61 /* UserInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4554899423ECF8A30091ED61 /* UserInfoController.swift */; };
 		457E030A23C58B6E00523057 /* GFContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457E030923C58B6E00523057 /* GFContainerView.swift */; };
@@ -62,6 +63,7 @@
 		452B861423C405600034942E /* GFBodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFBodyLabel.swift; sourceTree = "<group>"; };
 		452B861623C406800034942E /* GFAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAlertController.swift; sourceTree = "<group>"; };
 		452B861823C40F880034942E /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
+		4553D5042404AAB700C39A2A /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 		4554899223E91CDF0091ED61 /* GFEmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFEmptyStateView.swift; sourceTree = "<group>"; };
 		4554899423ECF8A30091ED61 /* UserInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoController.swift; sourceTree = "<group>"; };
 		457E030923C58B6E00523057 /* GFContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFContainerView.swift; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 			children = (
 				452B861823C40F880034942E /* UIViewController+Ext.swift */,
 				45049BE323F4B8070074BE0D /* Date+Ext.swift */,
+				4553D5042404AAB700C39A2A /* UIView+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4553D5052404AAB700C39A2A /* UIView+Ext.swift in Sources */,
 				452B860F23C2DBAF0034942E /* FollowerListController.swift in Sources */,
 				459BEBD323C05C1B00C73571 /* GFTextField.swift in Sources */,
 				45076F7823F4B428006ADC45 /* GFFollowerItemViewController.swift in Sources */,

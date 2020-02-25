@@ -9,20 +9,19 @@
 import UIKit
 
 protocol UserInfoControllerDelegate: class {
-    func didTapGitHubProfile(for user: User)
-    func didTapGetFollowers(for user: User)
+    func didRequestFollowers(for username: String)
 }
 
 class UserInfoController: GFDataLoadingController {
-
-    var username: String!
-    weak var delegate: FollowerListControllerDelegate!
     
     let headerView = UIView()
     let itemViewOne = UIView()
     let itemViewTwo = UIView()
     let dateLabel = GFBodyLabel(textAlignment: .center)
     var itemViews = [UIView]()
+    
+    var username: String!
+    weak var delegate: UserInfoControllerDelegate!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -82,7 +81,7 @@ class UserInfoController: GFDataLoadingController {
 
         NSLayoutConstraint.activate([
             headerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            headerView.heightAnchor.constraint(equalToConstant: 180),
+            headerView.heightAnchor.constraint(equalToConstant: 210),
             
             itemViewOne.topAnchor.constraint(equalTo: headerView.bottomAnchor, constant: padding),
             itemViewOne.heightAnchor.constraint(equalToConstant: itemHeight),
@@ -91,7 +90,7 @@ class UserInfoController: GFDataLoadingController {
             itemViewTwo.heightAnchor.constraint(equalToConstant: itemHeight),
             
             dateLabel.topAnchor.constraint(equalTo: itemViewTwo.bottomAnchor, constant: padding),
-            dateLabel.heightAnchor.constraint(equalToConstant: 18)
+            dateLabel.heightAnchor.constraint(equalToConstant: 50)
         ])
     }
     
@@ -107,7 +106,7 @@ class UserInfoController: GFDataLoadingController {
     }
 }
 
-extension UserInfoController: UserInfoControllerDelegate {
+extension UserInfoController: ItemInfoControllerDelegate {
     
     func didTapGitHubProfile(for user: User) {
         guard let url = URL(string: user.htmlUrl) else {

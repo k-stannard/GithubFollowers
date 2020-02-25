@@ -26,6 +26,7 @@ class GFBodyLabel: UILabel {
         minimumScaleFactor = 0.75
         lineBreakMode = .byWordWrapping
         font = UIFont.preferredFont(forTextStyle: .body)
+        adjustsFontForContentSizeCategory = true
         translatesAutoresizingMaskIntoConstraints = false
     }
     
