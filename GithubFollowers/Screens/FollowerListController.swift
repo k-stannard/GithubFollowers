@@ -22,6 +22,7 @@ class FollowerListController: GFDataLoadingController {
     var page = 1
     var hasMoreFollowers = true
     var isSearching = false
+    var isLoadingMoreFollowers = false
     
     var collectionView: UICollectionView!
     var dataSource: UICollectionViewDiffableDataSource<Section, Follower>!
@@ -115,7 +116,7 @@ class FollowerListController: GFDataLoadingController {
     
     @objc func addButtonTapped() {
         showLoadingView()
-        
+        isLoadingMoreFollowers = true
         NetworkManager.shared.getUserInfo(from: username) { [weak self] result in
             guard let self = self else { return }
             self.dismissLoadingView()
@@ -136,6 +137,8 @@ class FollowerListController: GFDataLoadingController {
             case .failure(let error):
                 self.presentGFAlertOnMainThread(title: "Something went wrong", message: error.rawValue, buttonTitle: "Okay")
             }
+            
+            self.isLoadingMoreFollowers = false
         }
     }
 }
@@ -147,7 +150,7 @@ extension FollowerListController: UICollectionViewDelegate {
         let height = scrollView.frame.size.height
         
         if offsetY > contentHeight - height {
-            guard hasMoreFollowers else { return }
+            guard hasMoreFollowers, !isLoadingMoreFollowers else { return }
             page += 1
             getFollowers(username: username, page: page)
         }
