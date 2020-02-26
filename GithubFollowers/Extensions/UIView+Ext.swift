@@ -19,6 +19,7 @@ extension UIView {
            bottomAnchor.constraint(equalTo: superview.bottomAnchor),
         ])
     }
+    
     func addSubviews(_ views: UIView...) {
         views.forEach { view in
             addSubview(view)

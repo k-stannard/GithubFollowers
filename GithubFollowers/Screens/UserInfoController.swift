@@ -65,7 +65,7 @@ class UserInfoController: GFDataLoadingController {
         }
     }
     
-    func configureUIElements(with user: User) {
+    fileprivate func configureUIElements(with user: User) {
         self.add(childViewController: GFUserInfoHeaderController(user: user), to: self.headerView)
         self.add(childViewController: GFRepoItemViewController(user: user, delegate: self), to: self.itemViewOne)
         self.add(childViewController: GFFollowerItemViewController(user: user, delegate: self), to: self.itemViewTwo)
@@ -111,7 +111,7 @@ class UserInfoController: GFDataLoadingController {
         childViewController.didMove(toParent: self)
     }
     
-    @objc func dismissController() {
+    @objc fileprivate func dismissController() {
         dismiss(animated: true)
     }
 }
@@ -135,6 +135,7 @@ extension UserInfoController: GFFollowerItemControllerDelegate {
             presentGFAlertOnMainThread(title: "No Followers", message: "This user has no followers.", buttonTitle: "Okay")
             return
         }
+        
         delegate.didRequestFollowers(for: user.login)
         dismissController()
     }

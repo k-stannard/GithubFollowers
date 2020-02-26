@@ -15,6 +15,10 @@ class GFTextField: UITextField {
         configure()
     }
     
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     fileprivate func configure() {
         layer.cornerRadius = 10
         layer.borderWidth = 2
@@ -34,9 +38,5 @@ class GFTextField: UITextField {
         placeholder = "Enter a username"
         
         translatesAutoresizingMaskIntoConstraints = false
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }

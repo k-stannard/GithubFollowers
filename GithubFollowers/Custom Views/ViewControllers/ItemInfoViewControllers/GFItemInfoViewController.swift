@@ -17,17 +17,21 @@ class GFItemInfoViewController: UIViewController {
     
     var user: User!
     
+    init(user: User) {
+        super.init(nibName: nil, bundle: nil)
+        self.user = user
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureBackgroundView()
         configureActionButton()
         configureStackView()
         layoutUI()
-    }
-    
-    init(user: User) {
-        super.init(nibName: nil, bundle: nil)
-        self.user = user
     }
     
     fileprivate func configureBackgroundView() {
@@ -66,9 +70,5 @@ class GFItemInfoViewController: UIViewController {
             actionButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
             actionButton.heightAnchor.constraint(equalToConstant: 44)
         ])
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }

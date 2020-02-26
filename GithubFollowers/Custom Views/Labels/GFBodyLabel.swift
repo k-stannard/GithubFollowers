@@ -20,6 +20,10 @@ class GFBodyLabel: UILabel {
         self.textAlignment = textAlignment
     }
     
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     fileprivate func configureBodyLabel() {
         textColor = .secondaryLabel
         adjustsFontSizeToFitWidth = true
@@ -28,9 +32,5 @@ class GFBodyLabel: UILabel {
         font = UIFont.preferredFont(forTextStyle: .body)
         adjustsFontForContentSizeCategory = true
         translatesAutoresizingMaskIntoConstraints = false
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }

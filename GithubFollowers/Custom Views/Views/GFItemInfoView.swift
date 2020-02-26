@@ -8,9 +8,7 @@
 
 import UIKit
 
-enum ItemInfoType {
-    case repos, gists, followers, following
-}
+enum ItemInfoType { case repos, gists, followers, following }
 
 class GFItemInfoView: UIView {
 
@@ -21,6 +19,10 @@ class GFItemInfoView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         configureItemInfoView()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     fileprivate func configureItemInfoView() {
@@ -65,9 +67,5 @@ class GFItemInfoView: UIView {
         }
         
         countLabel.text = String(count)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }
